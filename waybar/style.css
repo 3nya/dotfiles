@@ -1,0 +1,122 @@
+* {
+    font-family: monospace;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+window#waybar {
+    background-color: rgba(43, 44, 52, 0.5);
+    color: #ffffff;
+    transition: background-color 0.5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+#window {
+    font-family: 'Sarasa Gothic SC', sans-serif;
+}
+
+#clock {
+    min-width: 140px;
+    /* background: #3b3f51; */
+    color: #ffffff;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+
+#custom-power {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    /* background: #536067; */
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+#battery,
+#cpu,
+#memory,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode,
+#idle_inhibitor,
+#keyboard-state,
+#scratchpad {
+    padding: 5px 8px;
+    /* background-color: #3b3f51e8; */
+    color: #ffffff;
+}
+
+#battery.charging{
+    background-color: rgba(176, 183, 230, 0.5);
+}
+
+#battery.critical:not(.charging) {
+    background-color: rgba(238, 101, 101, 0.614);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: #3b3f51;
+    }
+}
+
+#network.disconnected {
+    background-color: rgba(238, 101, 101, 0.614);
+}
+
+#pulseaudio.muted {
+    background-color: #3b3f51;
+    color: #b5b4e2;
+}
+
+#tray {
+    background-color: #b5b4e2;
+    color: #282a36;
+}
+
+#tray>.passive {
+    -gtk-icon-effect: dim;
+    color: #6272a4;
+}
+
+#tray>.needs-attention {
+    background-color: #ff5555;
+    color: #ffffff;
+}
+
+#idle_inhibitor.activated {
+    background-color: #b5b4e2; 
+    color: #3b3f51;
+}
+
+#workspaces button,
+#mode {
+    padding: 5px 8px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+#workspaces button:hover,
+#workspaces button.focused {
+    background-color: #6272a4;
+    box-shadow: inset 0 -3px #ffffff;
+}
+
+#workspaces button.urgent {
+    background-color: #b54f4f;
+}
+
+label:focus {
+    background-color: #000000;
+}
