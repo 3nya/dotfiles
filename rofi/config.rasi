@@ -32,6 +32,7 @@ mainbox {
 	children: [inputbar, message, mode-switcher, listview, textbox];
 	spacing: 30px;
 	padding: 30px 0;
+	margin: 1px;
 	border-color: @base0D;
 }
 
@@ -110,7 +111,7 @@ element alternate {
 
 /* unselected items (normal and alternate) */
 element normal normal, element alternate normal {
-    background-color: #2e3543bc; /* plus some transparency */
+    background-color: transparent; /* plus some transparency */
     text-color: @base07;
 }
 
